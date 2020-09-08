@@ -14,8 +14,8 @@
     <div class="col-12 col-md-4">
       <h4 class="text-center">Add a plant</h4>
       <%= simple_form_for [ @garden, @plant ] do |f| %>
-        <%= f.input :name, placeholder: "Palm tree" %>
-        <%= f.input :image_url, placeholder: "https://some_nice_image_found_on_google.jpg" %>
+        <%= f.input :name, as: :string, required: false, placeholder: "Palm tree", label: "Name of your garden" %>
+        <%= f.input :image_url, as: :string, required: false, placeholder: "https://some_nice_image_found_on_google.jpg" , label: "My url image" %>
         <div class="form-actions">
           <%= f.submit "Add", class: "btn btn-flat" %>
         </div>
